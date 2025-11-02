@@ -1,0 +1,50 @@
+[
+  {
+    "nome": "Farol (Ponto mais alto)",
+    "tipo": "ponto",
+    "lat": -13.37463,
+    "lng": -38.91428,
+    "descricao": "Ponto de vista mais alto da ilha, perto do Farol.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Farol_Morro_de_S%C3%A3o_Paulo_-_Bahia.jpg"
+  },
+  {
+    "nome": "Igreja N. Sra da Luz",
+    "tipo": "ponto",
+    "lat": -13.37517,
+    "lng": -38.91307,
+    "descricao": "Igreja do século XIX, coração da vila.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Igreja_de_Nossa_Senhora_da_Luz_Morro_de_S%C3%A3o_Paulo.jpg"
+  },
+  {
+    "nome": "Cais (Embarque)",
+    "tipo": "embarque",
+    "lat": -13.376873628690685,
+    "lng": -38.91826464022521,
+    "descricao": "Ponto principal de chegada e saída da ilha.",
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/ee/df/61/cais-do-morro-de-sao-paulo.jpg?w=1200&h=800&s=1"
+  },
+  {
+    "nome": "Toca do Morcego (Bar)",
+    "tipo": "bar",
+    "lat": -13.37526,
+    "lng": -38.91389,
+    "descricao": "Bar famoso pelo pôr do sol e música ao vivo.",
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/23/bd/3a/toca-do-morcego.jpg?w=1200&h=800&s=1"
+  },
+  {
+    "nome": "Primeira Praia",
+    "tipo": "praia",
+    "lat": -13.37731,
+    "lng": -38.91185,
+    "descricao": "Praia com mar calmo e ótima para mergulho.",
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/21/07/2a/primeira-praia.jpg?w=1200&h=800&s=1"
+  },
+  {
+    "nome": "Segunda Praia",
+    "tipo": "praia",
+    "lat": -13.37901,
+    "lng": -38.91054,
+    "descricao": "Centro da vida noturna, bares e festas à beira-mar.",
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d2/f8/37/segunda-praia.jpg?w=1200&h=800&s=1"
+  }
+]

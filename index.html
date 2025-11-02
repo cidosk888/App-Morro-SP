@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Morro SP</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Nosso CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Manifest para PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0080ff" />
+</head>
+<body>
+  <header>
+    <h1>🌴 App Morro SP 🌊</h1>
+    <nav>
+      <button onclick="mostrarMapa()">Mapa</button>
+      <button onclick="mostrarMares()">Tábua de Marés</button>
+      <button onclick="mostrarGuia()">Guia</button>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div id="mapa"></div>
+    <section id="mares" style="display:none;">
+      <h2>🌅 Tábua de Marés — Novembro 2025</h2>
+      <table>
+        <tr><th>Data</th><th>Maré Alta</th><th>Maré Baixa</th></tr>
+        <tr><td>01/11</td><td>05:30 / 17:40</td><td>11:40 / 23:50</td></tr>
+        <tr><td>10/11</td><td>10:00 / 22:20</td><td>04:30 / 16:40</td></tr>
+        <tr><td>15/11</td><td>06:00 / 18:30</td><td>12:20 / 00:40</td></tr>
+        <tr><td>20/11</td><td>08:40 / 20:40</td><td>02:30 / 14:30</td></tr>
+        <tr><td>25/11</td><td>11:20 / 23:10</td><td>05:30 / 17:50</td></tr>
+        <tr><td>30/11</td><td>07:00 / 19:10</td><td>01:10 / 13:30</td></tr>
+      </table>
+    </section>
+    <section id="guia" style="display:none;">
+      <h2>🗺️ Guia Completo de Morro de São Paulo</h2>
+      
+      <div class="categoria">
+        <h3>🏰 Pontos Turísticos</h3>
+        <div class="lista-cards">
+          <div class="card">
+            <h4>Farol do Morro</h4>
+            <p>Construído em 1855, guia navegadores há mais de 150 anos. Vista panorâmica da ilha e tirolesa de 300m até a Primeira Praia.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=-13.374630,-38.914280" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Igreja Nossa Senhora da Luz</h4>
+            <p>Erguida em 1620, coração da vila colonial. Representa a fé dos primeiros colonos e abriga missas históricas.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=-13.375170,-38.913070" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Cais de Embarque</h4>
+            <p>Ponto principal de chegada desde o século XVII, vital para o comércio colonial e defesa da Baía de Todos os Santos.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=-13.374240,-38.912620" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Primeira Praia</h4>
+            <p>Praia calma com piscinas naturais, ideal para mergulho. Protegida por corais desde a era colonial.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=-13.377310,-38.911850" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Segunda Praia</h4>
+            <p>Centro da vida noturna desde os anos 70, com bares e areia dourada. Berço dos primeiros hippies na ilha.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=-13.379010,-38.910540" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Fortaleza de Tapirandu</h4>
+            <p>Ruínas de 1630, erguidas contra invasões holandesas. Guardiã da história da Baía de Todos os Santos.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Fortaleza+de+Tapirandu,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Fonte Grande</h4>
+            <p>Construída em 1746 como sistema de água colonial. Ponto de banho e abastecimento histórico.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Fonte+Grande,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Casarão Colonial</h4>
+            <p>Moradia de 1608 que hospedou D. Pedro II. Uma das mais antigas da ilha, com arquitetura colonial preservada.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Casarao+Colonial,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Teatro do Morro</h4>
+            <p>Antigo teatro no Mangaba, com 188 degraus. Palco de capoeira e cultura desde o século XIX.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Teatro+do+Morro,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>🍹 Bares e Restaurantes</h3>
+        <div class="lista-cards">
+          <div class="card">
+            <h4>Toca do Morcego (Bar)</h4>
+            <p>No alto de falésia, famoso pelo pôr do sol e música ao vivo. Lounge com drinks tropicais e vista para o mar.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Toca+do+Morcego,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Buda Beach (Bar/Restaurante)</h4>
+            <p>Na Segunda Praia, culinária internacional com toques baianos. Ambiente zen e petiscos à beira-mar.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Buda+Beach,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>O Casarão (Restaurante)</h4>
+            <p>Em construção de 1608, pratos regionais e internacionais. Sofisticado, com elementos coloniais preservados.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=O+Casarao,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Cantina Barolo (Restaurante Italiano)</h4>
+            <p>Tradicional com massas artesanais e menu degustação. Ambiente amigável e mojitos famosos.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cantina+Barolo,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Restaurante Piscinas (Quarta Praia)</h4>
+            <p>40 anos de história, frutos do mar frescos na areia. Tempero baiano autêntico por nativa da ilha.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Restaurante+Piscinas,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+          <div class="card">
+            <h4>Maré Bar & Grill (Terceira Praia)</h4>
+            <p>Pratos frescos e baianos, com música ao vivo. Perfeito para frutos do mar grelhados.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Mare+Bar+&+Grill,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Ver no Mapa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3>🎉 Festas e Eventos Famosos</h3>
+        <div class="lista-cards">
+          <div class="card">
+            <h4>Luaus na Segunda Praia</h4>
+            <p>Segundas e quintas, desde os anos 70. Fogueiras, música ao vivo (axé, samba) e caipirinhas na areia.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Segunda+Praia,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+          <div class="card">
+            <h4>Teatro do Morro</h4>
+            <p>Quartas-feiras no Mangaba, tradição desde o século XIX. Capoeira, teatro, DJs e música brasileira até o amanhecer.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Teatro+do+Morro,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+          <div class="card">
+            <h4>Festa de Iemanjá</h4>
+            <p>2 de fevereiro, devoção à Rainha do Mar há 15+ anos. Oferendas, batuques e "Encontro das Águas" na praia.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Primeira+Praia,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+          <div class="card">
+            <h4>Ressaca do Carnaval</h4>
+            <p>Quarta de Cinzas a Domingo, mais animada que o Carnaval. Festas privadas e trios na Gamboa, pós-Salvador.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Segunda+Praia,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+          <div class="card">
+            <h4>Festival de Primavera</h4>
+            <p>Setembro/outubro, com artistas como Carlinhos Brown. Shows, artesanato e badalação na Terceira Praia.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Terceira+Praia,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+          <div class="card">
+            <h4>Réveillon</h4>
+            <p>Queima de fogos na Segunda Praia, seguido de festa no Village Paraíso. Vestidos de branco para o ano novo.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Segunda+Praia,+Morro+de+S%C3%A3o+Paulo" target="_blank">📍 Local</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Alcides Costa de Souza — Projeto UNISA 2025</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Nosso JS -->
+  <script src="app.js"></script>
+</body>
+</html>

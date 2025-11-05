@@ -10,16 +10,16 @@
   {
     "nome": "Igreja N. Sra da Luz",
     "tipo": "ponto",
-    "lat": -13.37792149419372,
-    "lng": -38.913713323,
+    "lat": -13.377747789156269,
+    "lng": -9174331554412,
     "descricao": "Igreja do século XIX, coração da vila.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Igreja_de_Nossa_Senhora_da_Luz_Morro_de_S%C3%A3o_Paulo.jpg"
   },
   {
     "nome": "Cais (Embarque)",
     "tipo": "embarque",
-    "lat": -13.376873628690685,
-    "lng": -38.9128646422521,
+    "lat": -13.376821439922574, 
+    "lng": -38.91824318255946,
     "descricao": "Ponto principal de chegada e saída da ilha.",
     "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/2f/8e/5c/cais-de-morro-de-sao.jpg"
   },
@@ -34,16 +34,16 @@
   {
     "nome": "Primeira Praia",
     "tipo": "praia",
-    "lat": -13.377310,
-    "lng": -38.911850,
+    "lat": -13.377541644128192,
+    "lng": -38.91423059802438,
     "descricao": "Praia calma com piscinas naturais.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Primeira_Praia_Morro_de_S%C3%A3o_Paulo.jpg/800px-Primeira_Praia_Morro_de_S%C3%A3o_Paulo.jpg"
   },
   {
     "nome": "Segunda Praia",
     "tipo": "praia",
-    "lat": -13.379010,
-    "lng": -38.910540,
+    "lat": -13.379853589469079,
+    "lng": -38.91143573625957,
     "descricao": "Centro da vida noturna com bares e festas.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Segunda_Praia_Morro_de_S%C3%A3o_Paulo.jpg/800px-Segunda_Praia_Morro_de_S%C3%A3o_Paulo.jpg"
   }

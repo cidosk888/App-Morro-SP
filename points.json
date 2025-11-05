@@ -2,16 +2,16 @@
   {
     "nome": "Farol (Ponto mais alto)",
     "tipo": "ponto",
-    "lat": -13.375829850858393, 
-    "lng": -38.91537321899404,
+    "lat": -13.37582985858393,
+    "lng": -38.9157321899044,
     "descricao": "Ponto de vista mais alto da ilha, perto do Farol.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Farol_Morro_de_S%C3%A3o_Paulo_-_Bahia.jpg"
   },
   {
     "nome": "Igreja N. Sra da Luz",
     "tipo": "ponto",
-    "lat": -13.377792149419372,
-    "lng": -91745461313323,
+    "lat": -13.37792149419372,
+    "lng": -38.913713323,
     "descricao": "Igreja do século XIX, coração da vila.",
     "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Igreja_de_Nossa_Senhora_da_Luz_Morro_de_S%C3%A3o_Paulo.jpg"
   },
@@ -19,33 +19,32 @@
     "nome": "Cais (Embarque)",
     "tipo": "embarque",
     "lat": -13.376873628690685,
-    "lng": -38.91826464022521,
+    "lng": -38.9128646422521,
     "descricao": "Ponto principal de chegada e saída da ilha.",
-    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/ee/df/61/cais-do-morro-de-sao-paulo.jpg?w=1200&h=800&s=1"
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/2f/8e/5c/cais-de-morro-de-sao.jpg"
   },
   {
     "nome": "Toca do Morcego (Bar)",
     "tipo": "bar",
-    "lat": -13.376377868964427, 
-    "lng": 38.917191773013926,
+    "lat": -13.37637786964427,
+    "lng": -38.91719732813926,
     "descricao": "Bar famoso pelo pôr do sol e música ao vivo.",
-    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/23/bd/3a/toca-do-morcego.jpg?w=1200&h=800&s=1"
+    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/2f/8e/5c/toca-do-morcego.jpg"
   },
   {
     "nome": "Primeira Praia",
     "tipo": "praia",
-    "lat": -13.377552081850705,
-    "lng": -38.914252055617126,
-    "descricao": "Praia com mar calmo e ótima para mergulho.",
-    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/21/07/2a/primeira-praia.jpg?w=1200&h=800&s=1"
+    "lat": -13.377310,
+    "lng": -38.911850,
+    "descricao": "Praia calma com piscinas naturais.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Primeira_Praia_Morro_de_S%C3%A3o_Paulo.jpg/800px-Primeira_Praia_Morro_de_S%C3%A3o_Paulo.jpg"
   },
   {
     "nome": "Segunda Praia",
     "tipo": "praia",
-    "lat": -13.379942309296826, 
-    "lng": -38.91147328709429,
-    "descricao": "Centro da vida noturna, bares e festas à beira-mar.",
-    "imagem": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d2/f8/37/segunda-praia.jpg?w=1200&h=800&s=1"
+    "lat": -13.379010,
+    "lng": -38.910540,
+    "descricao": "Centro da vida noturna com bares e festas.",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Segunda_Praia_Morro_de_S%C3%A3o_Paulo.jpg/800px-Segunda_Praia_Morro_de_S%C3%A3o_Paulo.jpg"
   }
-  
 ]
